@@ -11,6 +11,12 @@ Console.Clear();
 Console.Write("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+while (number < 100 || number > 999)
+    {
+        Console.WriteLine("Число не трехзначное! Введите трехзнечное число: ");
+        number = Convert.ToInt32(Console.ReadLine());
+    }
+
 int n1 = number % 100;
 
 Console.WriteLine(n1 / 10);
