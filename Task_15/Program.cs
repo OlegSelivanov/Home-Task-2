@@ -7,20 +7,22 @@
 */
 
 Console.Clear();
-Console.Write("Введи цифру, обозначающую день недели: ");
+Console.WriteLine("Введите цифру, обозначающую день недели: ");
 int NumberDey = Convert.ToInt32(Console.ReadLine());
+
+while (NumberDey < 1 || NumberDey > 7)
+    {
+        Console.WriteLine("Цифра не обозначает день недели!\nВведите цифру, обозначающую день недели: ");
+                NumberDey = Convert.ToInt32(Console.ReadLine());
+    }
 
 void CheckingTheDayOfTheWeek (int NumberDey)  
 {
   if (NumberDey == 6 || NumberDey == 7) 
   
-    Console.WriteLine("Это выходной день");
-  
-  else if (NumberDey < 1 || NumberDey > 7) 
-  
-    Console.WriteLine("Это не день недели");
+    Console.WriteLine("Да, это выходной день!");
   
   else 
-    Console.WriteLine("Это не выходной день");
+    Console.WriteLine("Нет, это не выходной день :(");
 }
 CheckingTheDayOfTheWeek(NumberDey);
