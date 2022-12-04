@@ -11,19 +11,13 @@
 Console.Clear();
 
 Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+int n1 = Convert.ToInt32(Console.ReadLine());
+int n2 = n1;
 
-if (number < 100)
-    {
-        Console.WriteLine("Третьей цифры нет!");
-    }
-else if (number >= 100 || number <= 999)
-    {
-        int n3 = number % 10;
-        Console.WriteLine( n3 );
-    }
-/*else if (number >= 1000)
+if (n1 < 100)
+    Console.WriteLine($"Третьей цифры нет!");
+else 
 {
-        int n3 = number % 10;
-        Console.WriteLine( n3 );
-    }*/
+    while (n2 > 999) n2 /= 10;
+    Console.WriteLine($"Третья цифра: {n2 % 10}");
+}
