@@ -13,9 +13,8 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 while (number < 100 || number > 999)
     {
-        Console.WriteLine("Число НЕ трехзначное!");
-        Console.WriteLine("Введите трехзначное число: ");
-        number = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Число НЕ трехзначное!\nВведите трехзначное число: ");
+                number = Convert.ToInt32(Console.ReadLine());
     }
 
 int n1 = number % 100;
